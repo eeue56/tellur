@@ -1,0 +1,141 @@
+@import '../layout';
+@import '../theme';
+
+html, body {
+  font-family:$font-stack;
+  background:$background;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:$font-stack;
+}
+
+.hidden {
+  display:none;
+}
+
+.faded {
+  color:#666;
+}
+
+.reveal {
+  overflow:hidden;
+}
+
+.high { color: $high; }
+.medium { color: $medium; }
+.low { color: $low; }
+
+input:checked + .reveal {
+  height:auto;
+  -webkit-transition:height .5s;
+}
+
+input:not(:checked) + .reveal {
+  height:0;
+  -webkit-transition:height .5s;
+}
+
+table {
+  width:100%;
+}
+
+header a {
+  color:#fff;
+}
+
+header a:focus {
+  color:#0B2144;
+}
+
+header a:hover {
+  color:$light;
+}
+
+header nav i.fa {
+  font-size:1.4em;
+  margin-left:0.5em;
+}
+
+.meter[priority=high] { color:$high; }
+.meter[priority=medium] { color:$medium; }
+.meter[priority=low] { color:$low; }
+
+.swatch input {
+  //display:none;
+}
+
+.swatch label {
+  width:2em;
+  height:2em;
+  line-height:2em;
+  text-align:center;
+  color:#fff;
+
+  &[for='color-1'] { background:#aa9839; }
+  &[for='color-2'] { background:#27556c; }
+  &[for='color-3'] { background:#28794c; }
+  &[for='color-4'] { background:#aa7539; }
+  &[for='color-5'] { background:#2c8437; }
+  &[for='color-6'] { background:#652770; }
+  &[for='color-7'] { background:#a23645; }
+  &[for='color-8'] { background:#aa5039; }
+}
+
+.search {
+  position:relative;
+
+  input {
+    display:inline;
+    padding-right:2em;
+  }
+
+  i {
+    position:absolute;
+    top:0.2em;
+    right:0.5em;
+    color:#666;
+    cursor:pointer;
+  }
+
+  i:hover {
+    color:$primary;
+  }
+}
+
+.step {
+  margin-bottom:1em;
+}
+
+/* Bootstrap Hacks */
+
+.glyphicon-chevron-left  {
+  &:before {
+    font-style:normal;
+    font-family:'FontAwesome';
+    content:'\f060';
+  }
+}
+
+.glyphicon-chevron-right  {
+  &:before {
+    font-style:normal;
+    font-family:'FontAwesome';
+    content:'\f061';
+  }
+}
+
+.well {
+  width:100%;
+}
+
+.well button {
+  padding:1em 0.5em;
+  font-size:0.8em;
+}
+
+.well button.active {
+  background:#eee;
+  color:#666;
+  border-color:#666;
+}

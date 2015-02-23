@@ -1,0 +1,50 @@
+@import '../layout';
+@import '../theme';
+
+body {
+  padding-top: $nav-height + 1em;
+}
+
+header[role=main].invert {
+  background: $primary;
+  a { color: #fff; }
+}
+
+header[role=main] {
+  position: fixed;
+  top:0;
+  color:#fff;
+  overflow:hidden;
+  width: 100%;
+  background:#f1f1f1;
+
+  height:$nav-height;
+  line-height:$nav-height;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+
+  .primary {
+    padding:0 1em;
+    background:$primary;
+    float:left;
+  }
+
+  .secondary {
+    float: left;
+    color:#555;
+
+    a {
+      color:#555;
+    }
+
+    a:hover {
+      color: $primary;
+    }
+  }
+}
+
+.logout {
+  color: #555;
+  padding: 0 1em;
+}
+

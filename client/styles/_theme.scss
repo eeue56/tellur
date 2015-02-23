@@ -1,0 +1,29 @@
+// global
+$background:#fafafa;
+$font-stack:'Open Sans', sans-serif;
+
+// default primary color values
+$h:200;
+$s:60%;
+$l:50%;
+$primary:hsl($h, $s, $l);
+$shade:hsl($h, $s - 20%, $l - 10%);
+$light:hsl($h, $s, $l + 30%);
+
+// priority color meters
+$high:hsl(0, 67%, 63%);
+$medium:hsl(30, 67%, 63%);
+$low:hsl(70, 67%, 63%);
+
+// invert to color
+@mixin invert {
+  background:$primary;
+  color:#fff;
+}
+
+// colour for messages
+@mixin message-color($hue) {
+  background:hsl($hue, 90%, 88%);
+  color:hsl($hue, 45%, 57%);
+}
+
