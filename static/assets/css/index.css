@@ -1,0 +1,157 @@
+body {
+  padding-top: 3.8em; }
+
+header[role=main].invert {
+  background: #3399cc; }
+  header[role=main].invert a {
+    color: #fff; }
+
+header[role=main] {
+  position: fixed;
+  top: 0;
+  color: #fff;
+  overflow: hidden;
+  width: 100%;
+  background: #f1f1f1;
+  height: 2.8em;
+  line-height: 2.8em;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10; }
+  header[role=main] .primary {
+    padding: 0 1em;
+    background: #3399cc;
+    float: left; }
+  header[role=main] .secondary {
+    float: left;
+    color: #555; }
+    header[role=main] .secondary a {
+      color: #555; }
+    header[role=main] .secondary a:hover {
+      color: #3399cc; }
+
+.logout {
+  color: #555;
+  padding: 0 1em; }
+
+html, body {
+  font-family: "Open Sans", sans-serif;
+  background: #fafafa; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", sans-serif; }
+
+.hidden {
+  display: none; }
+
+.faded {
+  color: #666; }
+
+.reveal {
+  overflow: hidden; }
+
+.high {
+  color: #e06161; }
+
+.medium {
+  color: #e0a161; }
+
+.low {
+  color: #cbe061; }
+
+input:checked + .reveal {
+  height: auto;
+  -webkit-transition: height .5s; }
+
+input:not(:checked) + .reveal {
+  height: 0;
+  -webkit-transition: height .5s; }
+
+table {
+  width: 100%; }
+
+header a {
+  color: #fff; }
+
+header a:focus {
+  color: #0B2144; }
+
+header a:hover {
+  color: #add6eb; }
+
+header nav i.fa {
+  font-size: 1.4em;
+  margin-left: 0.5em; }
+
+.meter[priority=high] {
+  color: #e06161; }
+
+.meter[priority=medium] {
+  color: #e0a161; }
+
+.meter[priority=low] {
+  color: #cbe061; }
+
+.swatch label {
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  color: #fff; }
+  .swatch label[for='color-1'] {
+    background: #aa9839; }
+  .swatch label[for='color-2'] {
+    background: #27556c; }
+  .swatch label[for='color-3'] {
+    background: #28794c; }
+  .swatch label[for='color-4'] {
+    background: #aa7539; }
+  .swatch label[for='color-5'] {
+    background: #2c8437; }
+  .swatch label[for='color-6'] {
+    background: #652770; }
+  .swatch label[for='color-7'] {
+    background: #a23645; }
+  .swatch label[for='color-8'] {
+    background: #aa5039; }
+
+.search {
+  position: relative; }
+  .search input {
+    display: inline;
+    padding-right: 2em; }
+  .search i {
+    position: absolute;
+    top: 0.2em;
+    right: 0.5em;
+    color: #666;
+    cursor: pointer; }
+  .search i:hover {
+    color: #3399cc; }
+
+.step {
+  margin-bottom: 1em; }
+
+/* Bootstrap Hacks */
+.glyphicon-chevron-left:before {
+  font-style: normal;
+  font-family: 'FontAwesome';
+  content: '\f060'; }
+
+.glyphicon-chevron-right:before {
+  font-style: normal;
+  font-family: 'FontAwesome';
+  content: '\f061'; }
+
+.well {
+  width: 100%; }
+
+.well button {
+  padding: 1em 0.5em;
+  font-size: 0.8em; }
+
+.well button.active {
+  background: #eee;
+  color: #666;
+  border-color: #666; }
+
+/*# sourceMappingURL=index.css.map */
