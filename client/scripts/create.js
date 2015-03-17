@@ -70,24 +70,45 @@ angular.module('create', [])
   return {
     restrict: 'E',
     scope: {
-
+      question:'='
     },
     controller: function($scope) {
-      $scope.options = [];
-
       $scope.addOption = function(){
-        $scope.options.push({
+        $scope.question.options.push({
           text: ''
         });
       };
     },
     template:
-    "<div class='row'>" +
-        "<div class='small-12'>" +
-            "<input type='text' placeholder='Enter question title..'></input>" + 
-            "<create-option-form ng-repeat='option in options' text='option.text'></create-option-form>" +
-            "<add-option-button ng-click='addOption()'>" +
-        "</div>" +
-    "</div>"
+      "<div class='small-12'>" +
+          "<input type='text' ng-model='question.title' placeholder='Enter question title..'></input>" + 
+          "<create-option-form ng-repeat='option in question.options' text='option.text'></create-option-form>" +
+          "<add-option-button ng-click='addOption()'>" +
+      "</div>" 
+  };
+})
+
+
+.directive('createQuestionsForm', function(Questions) {
+  return {
+    restrict: 'E',
+    scope: {
+
+    },
+    link: function(scope) {
+      scope.questions = Questions.questions;
+      Questions.bind(scope, 'questions');
+
+      scope.addQuestion = function(){
+        Questions.createQuestion();
+        Questions.questions.$save();
+      }
+    },
+    template:
+      "<div class='small-12'>" +
+          "<create-question-form ng-repeat='question in questions.$asArray()' question='question'></create-question-form>" +
+          "<add-question-button ng-click='addQuestion()'></add-question-button>" +
+      "</div>" 
   };
 });
+
