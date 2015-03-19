@@ -3,6 +3,7 @@ var routes = require('./routes');
 require('./create');
 require('./questions');
 require('./barrel');
+require('./uuid');
 
 angular.module('tellur', ['ui.router', 'ui.bootstrap',
                                'angularMoment',

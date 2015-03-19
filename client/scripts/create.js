@@ -36,7 +36,7 @@ angular.module('create', [])
     template:
     "<button class='tiny'>" +
       "<i class='fa fa-pencil'></i> " +
-      "<b>Save/b>" +
+      "<b>Save</b>" +
     "</button>" 
   };
 })
@@ -103,12 +103,16 @@ angular.module('create', [])
         Questions.createQuestion();
         Questions.questions.$save();
       }
+
+      scope.save = function() {
+        Questions.questions.$save();
+      }
     },
     template:
       "<div class='small-12'>" +
           "<create-question-form ng-repeat='question in questions.$asArray()' question='question'></create-question-form>" +
           "<add-question-button ng-click='addQuestion()'></add-question-button>" +
+          "<save-button ng-click='save()'></save-button>" + 
       "</div>" 
   };
 });
-

@@ -22,7 +22,7 @@ angular.module('questions', [])
     var me = this;
 
     scope.$watch(function(){ return scope[name]; }, function(oldValue, newValue){
-      //me.questions.$update(newValue);
+      me.questions.$save();
     });
   };
 
